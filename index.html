@@ -1,0 +1,552 @@
+<!doctype html>
+<!--
+  Lumen: free SaaS / AI landing page template (HTML, GSAP, Lenis, Three.js). MIT licensed.
+  Designed & built by MiddleSugar7000, freelance full-stack developer: https://middlesugar7000.xyz
+  Want a custom landing page for your product? https://middlesugar7000.xyz/#contact
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumen · Inference at the speed of light</title>
+<meta name="description" content="Lumen runs your AI models on 18,000 GPUs across 42 regions and routes every request to the nearest warm replica. Median latency 38 ms.">
+<meta name="theme-color" content="#07080b">
+<meta name="author" content="MiddleSugar7000 (https://middlesugar7000.xyz)">
+<meta property="og:title" content="Lumen · Free SaaS landing page template">
+<meta property="og:description" content="Dark, cinematic SaaS / AI landing page with a scroll-driven Three.js scene. Free and MIT licensed, by MiddleSugar7000.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='11' fill='none' stroke='%23ff6a2b' stroke-width='3'/%3E%3Ccircle cx='16' cy='16' r='4' fill='%23ff6a2b'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script>document.documentElement.classList.add('js')</script>
+<script type="importmap">
+{ "imports": {
+  "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+  "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+} }
+</script>
+</head>
+<body>
+
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="Lumen home">
+    <svg class="brand-mark" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11.5" stroke="url(#bm)" stroke-width="2.4"/><circle cx="16" cy="16" r="4.2" fill="#ff6a2b"/><defs><linearGradient id="bm" x1="4" y1="4" x2="28" y2="28"><stop stop-color="#fff"/><stop offset="1" stop-color="#ff6a2b"/></linearGradient></defs></svg>
+    Lumen
+  </a>
+  <nav class="nav-links" aria-label="Primary">
+    <a href="#platform">Platform</a>
+    <a href="#features">Features</a>
+    <a href="#console">Console</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">Docs</a>
+  </nav>
+  <div class="nav-cta">
+    <a href="#" class="link">Sign in</a>
+    <a href="#cta" class="btn btn-primary btn-sm magnetic">Start deploying</a>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============ HERO ============ -->
+<section class="hero" data-gl>
+  <div class="wrap hero-inner">
+    <div class="hero-copy">
+      <a href="#platform" class="launch" data-hero-fade><b>New</b> Lumen Edge v4: 11 new regions
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 3.5 10.5 8 6 12.5"/></svg></a>
+      <h1 class="display">Inference at the <em>speed of light.</em></h1>
+      <p class="lead" data-hero-fade>Lumen runs your models on 18,000 GPUs across 42 regions and sends every request to the nearest warm replica. No cold starts. No capacity planning. Just answers, fast.</p>
+      <div class="hero-ctas" data-hero-fade>
+        <a href="#cta" class="btn btn-primary btn-lg magnetic">Start deploying free
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a href="#console" class="btn btn-ghost btn-lg">See the console</a>
+      <div class="proof">
+        <div class="avatars">
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=96&h=96&fit=crop&crop=faces" alt="">
+          <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=96&h=96&fit=crop&crop=faces" alt="">
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=96&h=96&fit=crop&crop=faces" alt="">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=96&h=96&fit=crop&crop=faces" alt="">
+        </div>
+        <div>
+          <div class="stars" aria-label="4.9 out of 5">
+            <svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.2l2 4.3 4.7.5-3.5 3.2 1 4.6L8 11.5l-4.2 2.3 1-4.6L1.3 6l4.7-.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.2l2 4.3 4.7.5-3.5 3.2 1 4.6L8 11.5l-4.2 2.3 1-4.6L1.3 6l4.7-.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.2l2 4.3 4.7.5-3.5 3.2 1 4.6L8 11.5l-4.2 2.3 1-4.6L1.3 6l4.7-.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.2l2 4.3 4.7.5-3.5 3.2 1 4.6L8 11.5l-4.2 2.3 1-4.6L1.3 6l4.7-.5z"/></svg><svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 1.2l2 4.3 4.7.5-3.5 3.2 1 4.6L8 11.5l-4.2 2.3 1-4.6L1.3 6l4.7-.5z"/></svg>
+          </div>
+          <strong>2,400+ AI teams</strong> ship on Lumen
+        </div>
+      </div>
+      </div>
+    </div>
+
+    <div class="telemetry" data-hero-fade>
+      <div><span><i class="live"></i>Requests served today</span><b id="reqs">4,812,604,113</b></div>
+      <div><span>Global p50 latency</span><b>38<small>ms</small></b></div>
+      <div><span>Regions online</span><b>42<small>/ 42</small></b></div>
+      <div><span>Cold starts, last 90 days</span><b>0</b></div>
+    </div>
+  </div>
+  <div class="scroll-cue" aria-hidden="true"><i></i>Scroll</div>
+</section>
+
+<!-- ============ LOGOS ============ -->
+<section class="logos" data-gl aria-label="Customers">
+  <p>Powering production AI at teams that cannot afford to wait</p>
+  <div class="marquee">
+    <div class="marquee-track">
+      <!-- set 1 -->
+      <span class="logo"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 22 20H2z"/></svg>Northwind</span>
+      <span class="logo" style="font-weight:600;letter-spacing:-.04em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 4v16M12 4v16M19 4v16"/></svg>parallel</span>
+      <span class="logo serif" style="font-size:25px">Vesper AI</span>
+      <span class="logo" style="letter-spacing:.12em;font-size:16px;font-weight:600"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/></svg>KITE LABS</span>
+      <span class="logo" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M8 15V9l4 4 4-4v6"/></svg>Monogram</span>
+      <span class="logo" style="font-weight:600;letter-spacing:-.05em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6c4 0 4 12 8 12s4-12 8-12"/><path d="M4 18c4 0 4-12 8-12s4 12 8 12" opacity=".5"/></svg>helix</span>
+      <span class="logo serif" style="font-size:24px">Arcadia</span>
+      <span class="logo" style="font-weight:500;letter-spacing:-.02em"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20V2z"/></svg>Quanta</span>
+      <!-- set 2 (duplicate for seamless loop) -->
+      <span class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2 22 20H2z"/></svg>Northwind</span>
+      <span class="logo" aria-hidden="true" style="font-weight:600;letter-spacing:-.04em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 4v16M12 4v16M19 4v16"/></svg>parallel</span>
+      <span class="logo serif" aria-hidden="true" style="font-size:25px">Vesper AI</span>
+      <span class="logo" aria-hidden="true" style="letter-spacing:.12em;font-size:16px;font-weight:600"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="9"/></svg>KITE LABS</span>
+      <span class="logo" aria-hidden="true" style="font-weight:500"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><path d="M8 15V9l4 4 4-4v6"/></svg>Monogram</span>
+      <span class="logo" aria-hidden="true" style="font-weight:600;letter-spacing:-.05em"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6c4 0 4 12 8 12s4-12 8-12"/><path d="M4 18c4 0 4-12 8-12s4 12 8 12" opacity=".5"/></svg>helix</span>
+      <span class="logo serif" aria-hidden="true" style="font-size:24px">Arcadia</span>
+      <span class="logo" aria-hidden="true" style="font-weight:500;letter-spacing:-.02em"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20V2z"/></svg>Quanta</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATEMENT ============ -->
+<section class="statement" data-gl>
+  <div class="wrap">
+    <span class="eyebrow">Why we built Lumen</span>
+    <p class="fill-text">The fastest model in the world is useless if it lives <em>three oceans away</em> from the people using it. So we put yours everywhere, and kept it warm.</p>
+    <div class="statement-foot">
+      <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=96&h=96&fit=crop&crop=faces" alt="">
+      <span><b style="color:var(--fg);font-weight:500">Daniel Osei</b><br>Co-founder &amp; CEO</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MORPH (pinned 3D story) ============ -->
+<section class="morph" id="platform" data-gl>
+  <div class="wrap morph-inner">
+    <div class="stages">
+      <div class="stage on" data-stage="0">
+        <span class="num">01 / Bring any model</span>
+        <h3>Your weights. <em>Our light.</em></h3>
+        <p>Open weights, fine-tunes or your own architecture. Point Lumen at a Hugging Face ID or a container and it compiles the model for every chip it lands on.</p>
+        <div class="chips"><span class="chip"><i></i>Llama 4</span><span class="chip"><i></i>Qwen 3</span><span class="chip"><i></i>Mistral Large</span><span class="chip"><i></i>Your fine-tune</span></div>
+      </div>
+      <div class="stage" data-stage="1">
+        <span class="num">02 / Run it everywhere</span>
+        <h3>42 regions. <em>One endpoint.</em></h3>
+        <p>Six continents, one URL. Every request lands on the closest warm replica, so a user in Lagos never waits for a round trip to Virginia.</p>
+        <div class="stat"><b>9 ms</b><span>median network hop<br>to the nearest replica</span></div>
+      </div>
+      <div class="stage" data-stage="2">
+        <span class="num">03 / Scale on the fabric</span>
+        <h3>18,000 GPUs <em>that act as one.</em></h3>
+        <p>Lumen watches demand in every region and moves capacity to where traffic is rising, minutes before it arrives. You pay for tokens, not idle cards.</p>
+        <div class="stat"><b>0</b><span>cold starts across the<br>fleet in the last 90 days</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="hud" aria-hidden="true">
+    <span class="tag" data-hud="0" style="left:-6%;top:6%"><i style="background:var(--accent)"></i><b>llama-4-70b</b> compiling for H200</span>
+    <span class="tag" data-hud="0" style="right:-4%;bottom:6%"><i></i><b>3.2 GB</b> weights streamed in 4.1 s</span>
+    <span class="tag" data-hud="1" style="left:0;top:22%"><i></i><b>fra-1</b> 7 ms</span>
+    <span class="tag" data-hud="1" style="right:2%;top:40%"><i></i><b>sin-2</b> 11 ms</span>
+    <span class="tag" data-hud="1" style="left:12%;bottom:12%"><i></i><b>gru-1</b> 9 ms</span>
+    <span class="tag warm" data-hud="2" style="left:2%;top:14%"><i></i><b>+240 GPUs</b> shifted to ap-south</span>
+    <span class="tag" data-hud="2" style="right:0;bottom:16%"><i></i>Fleet utilisation <b>91%</b></span>
+  </div>
+  <div class="rail" aria-hidden="true"><span id="railNum">01</span><span class="rail-bar"><i id="railBar"></i></span><span>03</span></div>
+</section>
+
+<!-- ============ FEATURES / BENTO ============ -->
+<section class="features solid edge" id="features">
+  <div class="wrap">
+    <div class="sec-head split">
+      <h2 class="h2" data-split>Everything between your model and <em>a million users.</em></h2>
+      <p class="lead" data-reveal-one>Routing, autoscaling, observability and guardrails ship in the box. You write the model. Lumen handles the planet.</p>
+    </div>
+
+    <div class="bento" data-reveal>
+      <article class="cell spot s4">
+        <div class="lat">
+          <div class="panel lat-chart">
+            <div class="lat-top">
+              <div><span>Global p50, live</span><br><b id="latNum">38<small>ms</small></b></div>
+              <span class="pill-ok"><i class="live"></i>All regions healthy</span>
+            </div>
+            <svg viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+              <defs><linearGradient id="latFill" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff6a2b" stop-opacity=".35"/><stop offset="1" stop-color="#ff6a2b" stop-opacity="0"/></linearGradient></defs>
+              <path id="latArea" fill="url(#latFill)"/>
+              <path id="latLine" fill="none" stroke="#ff8a4f" stroke-width="2" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </div>
+          <ul class="panel regions">
+            <li>Frankfurt <span>7 ms</span><em style="--w:22%"></em></li>
+            <li>Virginia <span>12 ms</span><em style="--w:34%"></em></li>
+            <li>Singapore <span>11 ms</span><em style="--w:30%"></em></li>
+            <li>São Paulo <span>9 ms</span><em style="--w:26%"></em></li>
+            <li>Lagos <span>14 ms</span><em style="--w:40%"></em></li>
+          </ul>
+        </div>
+        <div class="txt"><h3>Sub-50 ms, on every continent</h3><p>Anycast routing picks the nearest warm replica for every request. Latency is a property of the platform, not of where you deployed.</p></div>
+      </article>
+
+      <article class="cell spot s2">
+        <div class="ring-wrap"><div class="ring">
+          <svg viewBox="0 0 160 160" aria-hidden="true">
+            <circle cx="80" cy="80" r="70" fill="none" stroke="rgb(255 255 255/.07)" stroke-width="10"/>
+            <circle class="ring-arc" cx="80" cy="80" r="70" fill="none" stroke="url(#ringG)" stroke-width="10" stroke-linecap="round"/>
+            <defs><linearGradient id="ringG" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ffb487"/><stop offset="1" stop-color="#ff6a2b"/></linearGradient></defs>
+          </svg>
+          <div class="val"><div><b>99.995%</b><span>uptime, trailing year</span></div></div>
+        </div></div>
+        <div class="txt"><h3>Fails over before you notice</h3><p>Region down? Traffic reroutes in under 400 ms.</p></div>
+      </article>
+
+      <article class="cell spot s2">
+        <div class="panel router">
+          <svg viewBox="0 0 300 180" aria-hidden="true">
+            <path id="w1" class="wire" d="M76 32 C 110 32, 105 90, 128 90"/>
+            <path id="w2" class="wire" d="M76 90 L 128 90"/>
+            <path id="w3" class="wire" d="M76 148 C 110 148, 105 90, 128 90"/>
+            <path id="w4" class="wire" d="M172 90 C 195 90, 190 32, 224 32"/>
+            <path id="w5" class="wire" d="M172 90 L 224 90"/>
+            <path id="w6" class="wire" d="M172 90 C 195 90, 190 148, 224 148"/>
+            <g class="node"><rect x="10" y="20" width="66" height="24" rx="7"/><text x="43" y="36" text-anchor="middle">llama-4</text></g>
+            <g class="node"><rect x="10" y="78" width="66" height="24" rx="7"/><text x="43" y="94" text-anchor="middle">qwen-3</text></g>
+            <g class="node"><rect x="10" y="136" width="66" height="24" rx="7"/><text x="43" y="152" text-anchor="middle">your-ft</text></g>
+            <g class="node hub"><rect x="128" y="70" width="44" height="40" rx="10"/><circle cx="150" cy="90" r="7" fill="none" stroke="#ff6a2b" stroke-width="2"/><circle cx="150" cy="90" r="2.5" fill="#ff6a2b"/></g>
+            <g class="node"><rect x="224" y="20" width="66" height="24" rx="7"/><text x="257" y="36" text-anchor="middle">fra-1</text></g>
+            <g class="node"><rect x="224" y="78" width="66" height="24" rx="7"/><text x="257" y="94" text-anchor="middle">iad-2</text></g>
+            <g class="node"><rect x="224" y="136" width="66" height="24" rx="7"/><text x="257" y="152" text-anchor="middle">sin-1</text></g>
+            <circle r="3" fill="#ffb487"><animateMotion dur="2.4s" repeatCount="indefinite" begin="0s"><mpath href="#w1"/></animateMotion></circle>
+            <circle r="3" fill="#ffb487"><animateMotion dur="2.4s" repeatCount="indefinite" begin=".8s"><mpath href="#w2"/></animateMotion></circle>
+            <circle r="3" fill="#ffb487"><animateMotion dur="2.4s" repeatCount="indefinite" begin="1.6s"><mpath href="#w3"/></animateMotion></circle>
+            <circle r="3" fill="#fff"><animateMotion dur="2.4s" repeatCount="indefinite" begin=".4s"><mpath href="#w4"/></animateMotion></circle>
+            <circle r="3" fill="#fff"><animateMotion dur="2.4s" repeatCount="indefinite" begin="1.2s"><mpath href="#w5"/></animateMotion></circle>
+            <circle r="3" fill="#fff"><animateMotion dur="2.4s" repeatCount="indefinite" begin="2s"><mpath href="#w6"/></animateMotion></circle>
+          </svg>
+        </div>
+        <div class="txt"><h3>Model router</h3><p>Split traffic across models and versions by cost, latency or a rule you write.</p></div>
+      </article>
+
+      <article class="cell spot s2">
+        <div class="panel code" id="codeType" aria-label="lumen deploy example"></div>
+        <div class="txt"><h3>Deploy in one command</h3><p>From a model ID to a global endpoint in under two minutes.</p></div>
+      </article>
+
+      <article class="cell spot s2">
+        <div class="panel" style="flex:1;display:flex;flex-direction:column">
+          <div class="bars" id="bars"></div>
+          <div class="bars-meta"><span>GPUs in eu-west</span><b>412 → 655</b></div>
+        </div>
+        <div class="txt"><h3>Predictive autoscaling</h3><p>Capacity arrives minutes before your traffic does.</p></div>
+      </article>
+
+      <article class="cell spot s3">
+        <div class="leak"></div>
+        <div class="panel toggles" id="toggles">
+          <div class="tg">Zero data retention <span class="sw on"></span></div>
+          <div class="tg">Private VPC peering <span class="sw on"></span></div>
+          <div class="tg">EU-only routing <span class="sw"></span></div>
+          <div class="tg">Customer-managed keys <span class="sw on"></span></div>
+        </div>
+        <div class="txt"><h3>Private by default</h3><p>Prompts and outputs are never stored or used for training. SOC 2 Type II, HIPAA and GDPR from day one.</p></div>
+      </article>
+
+      <article class="cell spot s3">
+        <div class="panel budget">
+          <div class="budget-top"><b id="spend">$6,412</b><span>of $10,000 monthly guard</span></div>
+          <div class="meter"><i></i><u></u></div>
+          <div class="budget-rows">
+            <div><span>Cost per 1M tokens</span><b>$0.19</b></div>
+            <div><span>Saved vs. dedicated GPUs</span><b style="color:var(--ok)">−61%</b></div>
+          </div>
+        </div>
+        <div class="txt"><h3>Spend guard</h3><p>Hard budgets per project, alerts at 85%, and a per-token bill you can actually read.</p></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONSOLE MOCKUP ============ -->
+<section class="console solid" id="console">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">The console</span>
+      <h2 class="h2" data-split>One window onto <em>every token.</em></h2>
+      <p class="lead" data-reveal-one>Live traffic, cost and quality for every model in every region. Built for the on-call engineer at 3 a.m. and the CFO at 9.</p>
+    </div>
+
+    <div class="mock-stage">
+      <div class="mock" id="mock">
+        <div class="mock-bar"><i></i><i></i><i></i>
+          <span class="mock-url"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="7" width="10" height="7" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg>console.lumen.run/acme/production</span>
+        </div>
+        <div class="mock-body">
+          <aside class="mock-side">
+            <div class="ws"><i></i>Acme AI</div>
+            <a class="act"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg>Overview</a>
+            <a><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2 14 5v6l-6 3-6-3V5z"/><path d="M2 5l6 3 6-3M8 8v6"/></svg>Deployments</a>
+            <a><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M2 8h12M8 2c2 2 2 10 0 12M8 2c-2 2-2 10 0 12"/></svg>Regions</a>
+            <a><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 13 6 8l3 3 5-7"/></svg>Traces</a>
+            <a><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M8 2v12M4 5h6a2 2 0 0 1 0 4H6a2 2 0 0 0 0 4h6"/></svg>Billing</a>
+            <div class="sep"></div>
+            <small>MODELS</small>
+            <a>llama-4-70b</a><a>qwen-3-32b</a><a>acme-support-ft</a>
+          </aside>
+          <div class="mock-main">
+            <div class="mock-h"><h4>Production <span>last 24 hours</span></h4><div class="mock-tabs"><span>1h</span><span class="act">24h</span><span>7d</span><span>30d</span></div></div>
+            <div class="kpis">
+              <div class="kpi"><span>Requests</span><b>182.4M</b><em>+12.4%</em></div>
+              <div class="kpi"><span>p50 latency</span><b>36 ms</b><em>−4 ms</em></div>
+              <div class="kpi"><span>Tokens out</span><b>9.21B</b><em>+8.1%</em></div>
+              <div class="kpi"><span>Cost</span><b>$1,742</b><em>−18%</em></div>
+            </div>
+            <div class="chart-card">
+              <header><b>Traffic by region</b><div class="legend"><span><i style="background:#ff6a2b"></i>EU</span><span><i style="background:#ffb487"></i>Americas</span><span><i style="background:#5b6270"></i>APAC</span></div></header>
+              <svg id="trafficChart" viewBox="0 0 800 170" preserveAspectRatio="none" aria-hidden="true"></svg>
+            </div>
+            <div class="table">
+              <div class="tr th"><span>Deployment</span><span>Status</span><span>Regions</span><span>p50</span><span>Version</span></div>
+              <div class="tr"><span>llama-4-70b</span><span class="st"><i></i>Serving</span><span>42</span><span>34 ms</span><span class="mono">v12</span></div>
+              <div class="tr"><span>acme-support-ft</span><span class="st warm"><i></i>Rolling out</span><span>18 / 42</span><span>29 ms</span><span class="mono">v4</span></div>
+              <div class="tr"><span>qwen-3-32b</span><span class="st"><i></i>Serving</span><span>27</span><span>22 ms</span><span class="mono">v7</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="mock-fade"></div>
+      </div>
+      <div class="float f1" data-speed="1.4"><span class="ic"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg></span><div><b>Deploy succeeded</b><span>acme-support-ft v4 · 42 regions</span></div></div>
+      <div class="float f2" data-speed="-1.2"><span class="ic warm"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M8 13V3M4 7l4-4 4 4"/></svg></span><div><b>+120 GPUs in eu-west</b><span>Scaled ahead of a 3.1× spike</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STATS ============ -->
+<section class="stats solid alt">
+  <div class="giant" aria-hidden="true" data-speed="0.6">38ms</div>
+  <div class="wrap stat-grid" data-reveal>
+    <div><b><span data-count="4.8" data-dec="1">0</span><sup>B</sup></b><p>requests served every single day</p></div>
+    <div><b><span data-count="42">0</span></b><p>regions across six continents</p></div>
+    <div><b><span data-count="18000">0</span></b><p>GPUs behaving like one machine</p></div>
+    <div><b><span data-count="61">0</span><sup>%</sup></b><p>average saving vs. dedicated clusters</p></div>
+  </div>
+</section>
+
+<!-- ============ STEPS (stacking cards) ============ -->
+<section class="steps solid">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2 class="h2" data-split>From model ID to <em>planet-scale</em> in an afternoon.</h2>
+    </div>
+    <div class="stack">
+      <article class="stack-card">
+        <div>
+          <span class="idx">Step 01</span>
+          <h3>Connect your <em>model.</em></h3>
+          <p>Paste a Hugging Face ID, push a container, or upload raw weights. Lumen benchmarks it on six chip types and picks the cheapest one that meets your latency target.</p>
+          <ul>
+            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>Automatic quantisation with quality checks</li>
+            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>OpenAI-compatible API out of the box</li>
+          </ul>
+        </div>
+        <div class="visual"><div class="dots"></div>
+          <div class="term" id="term">
+            <div class="bar"><i></i><i></i><i></i></div>
+            <div class="ln"><span class="k">$</span> <span class="w">lumen deploy</span> meta-llama/Llama-4-70B</div>
+            <div class="ln">→ Fetching weights <span class="g">done</span> (3.2 GB, 4.1 s)</div>
+            <div class="ln">→ Benchmarking H200, B200, MI325X …</div>
+            <div class="ln">→ Selected <span class="w">H200 · fp8</span> · 31 ms p50</div>
+            <div class="ln">→ Rolling out to 42 regions <span class="g">✓</span></div>
+            <div class="ln"><span class="g">Live</span> at <span class="w">https://acme.lumen.run/v1</span></div>
+          </div>
+        </div>
+      </article>
+      <article class="stack-card">
+        <div>
+          <span class="idx">Step 02</span>
+          <h3>Go <em>global</em> by default.</h3>
+          <p>Every deployment is multi-region from the first request. Lumen keeps replicas warm where your users are, and lets the rest of the planet sleep.</p>
+          <ul>
+            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>Anycast endpoint with regional pinning</li>
+            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>Data residency controls per project</li>
+          </ul>
+        </div>
+        <div class="visual mapv"><svg id="worldMap" viewBox="0 0 600 340" aria-hidden="true"></svg></div>
+      </article>
+      <article class="stack-card">
+        <div>
+          <span class="idx">Step 03</span>
+          <h3>See every <em>millisecond.</em></h3>
+          <p>Each request is traced from edge to token. Find the slow prompt, the expensive tenant, or the region that needs more headroom, in one click.</p>
+          <ul>
+            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>OpenTelemetry export to your stack</li>
+            <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>Quality evals on live traffic</li>
+          </ul>
+        </div>
+        <div class="visual obsv">
+          <div class="trace"><span>edge · fra-1</span><u style="--l:0%;--w:8%"></u></div>
+          <div class="trace"><span>router</span><u style="--l:8%;--w:6%"></u></div>
+          <div class="trace"><span>queue</span><u style="--l:14%;--w:4%"></u></div>
+          <div class="trace"><span>prefill</span><u class="hot" style="--l:18%;--w:30%"></u></div>
+          <div class="trace"><span>decode · 412 tok</span><u class="hot" style="--l:48%;--w:44%"></u></div>
+          <div class="trace"><span>stream out</span><u style="--l:92%;--w:8%"></u></div>
+          <div class="summary"><span>Trace 7f3a…c21</span><span>Time to first token <b>41 ms</b></span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="voices solid alt">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Loved by people on call</span>
+      <h2 class="h2" data-split>Teams moved to Lumen <em>and stopped paging.</em></h2>
+    </div>
+    <div class="cols" id="cols"></div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="pricing solid" id="pricing">
+  <div class="wrap">
+    <div class="sec-head center">
+      <span class="eyebrow">Pricing</span>
+      <h2 class="h2" data-split>Pay for tokens, <em>not idle GPUs.</em></h2>
+      <div class="toggle" id="billing" role="group" aria-label="Billing period">
+        <span class="knob"></span>
+        <button class="act" data-period="m" aria-pressed="true">Monthly</button>
+        <button data-period="y" aria-pressed="false">Yearly <span class="save">−20%</span></button>
+      </div>
+    </div>
+    <div class="plans" data-reveal>
+      <article class="plan">
+        <h3>Starter</h3>
+        <p class="desc">For prototypes and side projects.</p>
+        <div class="price"><b>$0</b><small>/ month</small></div>
+        <ul>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>$25 of free inference credit</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>3 deployments, 6 regions</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>Community support</li>
+        </ul>
+        <a href="#cta" class="btn btn-ghost">Start free</a>
+      </article>
+      <article class="plan featured">
+        <h3>Growth <span>Most popular</span></h3>
+        <p class="desc">For products with real users and real SLAs.</p>
+        <div class="price"><b data-m="480" data-y="384">$480</b><small>/ month + usage</small></div>
+        <ul>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>Unlimited deployments, all 42 regions</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>Predictive autoscaling and model router</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>99.99% uptime SLA</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>Shared Slack channel with our engineers</li>
+        </ul>
+        <a href="#cta" class="btn btn-primary magnetic">Start 14-day trial
+          <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      </article>
+      <article class="plan">
+        <h3>Enterprise</h3>
+        <p class="desc">For regulated industries and huge fleets.</p>
+        <div class="price"><b>Custom</b></div>
+        <ul>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>Reserved capacity and committed-use pricing</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>Dedicated regions and VPC deployment</li>
+          <li><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8.5 6.5 12 13 4.5"/></svg>99.995% SLA, 15-minute response</li>
+        </ul>
+        <a href="#cta" class="btn btn-ghost">Talk to sales</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="faq solid alt" id="faq">
+  <div class="wrap faq-grid">
+    <div class="sec-head">
+      <span class="eyebrow">Questions</span>
+      <h2 class="h2" data-split>The things engineers <em>ask first.</em></h2>
+      <p class="lead">Still curious? Our engineers answer in the community Slack within the hour.</p>
+    </div>
+    <div class="qas">
+      <div class="qa open"><button aria-expanded="true">Is the API compatible with OpenAI clients?<span class="pm"></span></button>
+        <div class="ans"><div><p>Yes. Change the base URL and the key, and every OpenAI SDK works unchanged: chat, completions, embeddings, tool calls and streaming.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Do you store my prompts or outputs?<span class="pm"></span></button>
+        <div class="ans"><div><p>No. Zero retention is the default. Requests live in memory for the length of the call and are never logged, sampled or used for training.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">How do you avoid cold starts?<span class="pm"></span></button>
+        <div class="ans"><div><p>We forecast traffic per region from your history and keep the right number of replicas warm, with weights pre-staged on local NVMe. Scaling up means attaching a GPU, not downloading a model.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">Can I pin traffic to the EU?<span class="pm"></span></button>
+        <div class="ans"><div><p>Yes. Residency rules are set per project. EU-only, US-only or a custom list of regions, enforced at the edge before a request is routed.</p></div></div></div>
+      <div class="qa"><button aria-expanded="false">What happens when a region goes down?<span class="pm"></span></button>
+        <div class="ans"><div><p>Health checks run every 200 ms. A failing region is drained and its traffic moves to the next nearest replica, typically in under 400 ms, with no change to your endpoint.</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="cta" id="cta" data-gl>
+  <div class="wrap cta-inner">
+    <span class="eyebrow">Ready when you are</span>
+    <h2 data-split>Light up <em>your models.</em></h2>
+    <p class="lead" data-reveal-one>Deploy your first model free. $25 of credit, no card, live on 42 regions before your coffee cools.</p>
+    <div class="cta-ctas" data-reveal>
+      <a href="#" class="btn btn-primary btn-lg magnetic">Start deploying free
+        <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+      <a href="#" class="btn btn-ghost btn-lg">Book a demo</a>
+    </div>
+    <small>SOC 2 Type II · HIPAA · GDPR</small>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#top" class="brand"><svg class="brand-mark" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="11.5" stroke="url(#bm)" stroke-width="2.4"/><circle cx="16" cy="16" r="4.2" fill="#ff6a2b"/></svg>Lumen</a>
+        <p>The inference cloud for teams who measure in milliseconds.</p>
+        <span class="status"><i class="live"></i>All systems normal</span>
+      </div>
+      <div><h5>Platform</h5><ul><li><a href="#">Deploy</a></li><li><a href="#">Router</a></li><li><a href="#">Autoscaling</a></li><li><a href="#">Observability</a></li></ul></div>
+      <div><h5>Developers</h5><ul><li><a href="#">Docs</a></li><li><a href="#">API reference</a></li><li><a href="#">CLI</a></li><li><a href="#">Changelog</a></li></ul></div>
+      <div><h5>Company</h5><ul><li><a href="#">About</a></li><li><a href="#">Careers</a></li><li><a href="#">Blog</a></li><li><a href="#">Contact</a></li></ul></div>
+      <div><h5>Trust</h5><ul><li><a href="#">Security</a></li><li><a href="#">Privacy</a></li><li><a href="#">Status</a></li><li><a href="#">DPA</a></li></ul></div>
+    </div>
+  </div>
+  <div class="wordmark" aria-hidden="true">lumen</div>
+  <div class="wrap legal"><span>© 2026 Lumen Compute, Inc.</span><span class="credit">Template by <a href="https://middlesugar7000.xyz" target="_blank" rel="noopener">MiddleSugar7000</a> · <a href="https://middlesugar7000.xyz/#contact" target="_blank" rel="noopener">Get a custom landing page</a></span></div>
+</footer>
+
+<!-- Template credit badge. Delete this block (and .promo in style.css) to remove it. -->
+<aside class="promo" id="promo" aria-label="Template credit">
+  <a href="https://middlesugar7000.xyz/#contact" target="_blank" rel="noopener" class="promo-link">
+    <span class="promo-dot"></span>
+    <span class="promo-txt">Free template by <b>MiddleSugar7000</b></span>
+    <span class="promo-cta">Hire me <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+  </a>
+  <button class="promo-x" aria-label="Hide credit badge"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4l8 8M12 4l-8 8"/></svg></button>
+</aside>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+<script type="module" src="js/scene.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

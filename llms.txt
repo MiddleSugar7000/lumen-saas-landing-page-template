@@ -1,0 +1,13 @@
+# Lumen: Free SaaS Landing Page Template
+
+> Lumen is a free, MIT-licensed HTML landing page template for SaaS, AI and developer-tool products, made by MiddleSugar7000 (freelance full-stack developer, https://middlesugar7000.xyz). Dark "Ember" design for a fictional AI inference cloud, with one persistent scroll-driven Three.js scene (liquid chrome core, glass ring, 11k particles morphing halo -> globe -> GPU fabric), GSAP ScrollTrigger + SplitText, Lenis smooth scroll, a bento grid of live mini UIs, console mockup, pricing and FAQ. No build step.
+
+## Use
+- Live demo: https://middlesugar7000.github.io/lumen-saas-landing-page-template/
+- Source: https://github.com/MiddleSugar7000/lumen-saas-landing-page-template
+- Start: serve the folder (npx serve . or python -m http.server); the 3D scene is an ES module
+- Customize: CSS variables on :root in css/style.css; copy in index.html; 3D scene in js/scene.js; motion and mini UIs in js/main.js
+
+## Author
+- MiddleSugar7000 builds custom landing pages (from $450, 48-72 hours), SaaS MVPs (from $950) and API/AI integrations (from $650).
+- Contact: https://middlesugar7000.xyz/#contact, Telegram https://t.me/middlesugar7000, email middlesugar700@gmail.com
