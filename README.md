@@ -1,6 +1,6 @@
 <!--
   Lumen: free SaaS / AI landing page template (HTML, GSAP, Lenis, Three.js). MIT licensed.
-  Made by MiddleSugar7000, freelance full-stack developer: https://middlesugar7000.xyz
+  Made by Vantle, an independent design and development studio: https://vantle.studio
 -->
 
 <a href="https://middlesugar7000.github.io/lumen-saas-landing-page-template/">
@@ -19,7 +19,7 @@
   <img alt="No build step" src="https://img.shields.io/badge/build-none%20needed-F4F5F7?style=flat-square&labelColor=07080B">
   <img alt="Three.js" src="https://img.shields.io/badge/Three.js-scroll--driven%203D-FF6A2B?style=flat-square&labelColor=07080B">
   <img alt="GSAP" src="https://img.shields.io/badge/GSAP-ScrollTrigger%20%2B%20SplitText-F4F5F7?style=flat-square&labelColor=07080B">
-  <a href="https://middlesugar7000.xyz"><img alt="Made by MiddleSugar7000" src="https://img.shields.io/badge/made%20by-MiddleSugar7000-FF6A2B?style=flat-square&labelColor=07080B"></a>
+  <a href="https://vantle.studio/?utm_source=github&utm_medium=badge&utm_campaign=lumen"><img alt="Made by Vantle" src="https://img.shields.io/badge/made%20by-Vantle-593FF2?style=flat-square&labelColor=07080B"></a>
 </p>
 
 # Lumen: Free SaaS Landing Page Template with Three.js (HTML + GSAP + Lenis)
@@ -28,7 +28,7 @@
 
 Use it for an AI product, API, dev tool, cloud platform, B2B SaaS, startup launch or waitlist page. Swap the copy and you have a premium launch page in an afternoon.
 
-> 🛠️ **Want one built for your own product?** This template was designed and coded by **[MiddleSugar7000](https://middlesugar7000.xyz)**, a freelance full-stack developer. Custom landing pages from **$450**, delivered in 48–72 hours. **[Hire me →](https://middlesugar7000.xyz/#contact)**
+> **Want one built for your own product?** This template was designed and coded by **[Vantle](https://vantle.studio/?utm_source=github&utm_medium=readme&utm_campaign=lumen)**, an independent design and development studio for brands, websites and software. We reply within one business day. **[Start a project →](https://vantle.studio/?utm_source=github&utm_medium=readme&utm_campaign=lumen#start)**
 
 ---
 
@@ -123,44 +123,43 @@ No. It's plain HTML/CSS/JS. Serve the folder from any static host.
 **What kind of product is it good for?**
 AI products, APIs, developer tools, cloud and infrastructure platforms, B2B SaaS, startup launches and waitlists. Anything that benefits from a dark, technical, premium look.
 
-**Can I remove the "Free template by MiddleSugar7000" badge?**
+**Can I remove the "Free template by Vantle" badge?**
 Yes. Delete the `<aside class="promo">` block in `index.html`. A link back is appreciated, never required.
 
 **Will the 3D scene slow down my visitors' devices?**
 It's built to scale down. It caps render resolution, pauses when off screen, and lowers quality automatically on slower GPUs.
 
 **Who made this template?**
-[MiddleSugar7000](https://middlesugar7000.xyz), a freelance full-stack developer who builds custom landing pages, SaaS products, APIs and AI integrations.
+[Vantle](https://vantle.studio/?utm_source=github&utm_medium=faq&utm_campaign=lumen), an independent design and development studio that builds brands, websites and software products.
 
 **Can you build a custom version for my business?**
-Yes. Custom landing pages start at $450 and are typically delivered in 48–72 hours, with a fixed quote within 24 hours and no calls required. [Get in touch](https://middlesugar7000.xyz/#contact).
+Yes. Tell us about it at [hello@vantle.studio](mailto:hello@vantle.studio) or through the [project form](https://vantle.studio/?utm_source=github&utm_medium=faq&utm_campaign=lumen#start). We reply within one business day; a focused landing page usually takes 2 to 4 weeks.
 
 ## License
 
-[MIT](LICENSE) © MiddleSugar7000. A ⭐ or a link back to [middlesugar7000.xyz](https://middlesugar7000.xyz) is appreciated, never required.
+[MIT](LICENSE) © MiddleSugar7000. A ⭐ or a link back to [vantle.studio](https://vantle.studio/?utm_source=github&utm_medium=license&utm_campaign=lumen) is appreciated, never required.
 
 Lumen is a fictional company; names, logos, quotes and numbers on the page are placeholder content. Portrait photos load from [Unsplash](https://unsplash.com) and should be replaced with your own.
 
-## Need a custom landing page?
+## Built by Vantle
 
-<a href="https://middlesugar7000.xyz/#contact">
-  <img src=".github/assets/hire.svg" alt="Want one built for your product? Hire MiddleSugar7000, freelance full-stack developer. Custom landing pages from $450, SaaS MVPs from $950 and AI integrations from $650." width="100%">
-</a>
+<a href="https://vantle.studio/?utm_source=github&utm_medium=readme&utm_campaign=lumen"><img src=".github/assets/vantle.svg" alt="Vantle, an independent design and development studio. A good idea, in full focus." width="100%"></a>
 
 <p align="center">
-  <a href="https://middlesugar7000.xyz/#contact"><img src=".github/assets/btn-hire.svg" alt="Hire me" height="56"></a>&nbsp;
-  <a href="https://middlesugar7000.xyz"><img src=".github/assets/btn-portfolio.svg" alt="My portfolio" height="56"></a>
+  <a href="https://vantle.studio/?utm_source=github&utm_medium=readme&utm_campaign=lumen#start"><img src=".github/assets/btn-vantle-start.svg" alt="Start a project with Vantle" height="54"></a>&nbsp;
+  <a href="https://vantle.studio/?utm_source=github&utm_medium=readme&utm_campaign=lumen#work"><img src=".github/assets/btn-vantle-work.svg" alt="See the work" height="54"></a>&nbsp;
+  <a href="mailto:hello@vantle.studio"><img src=".github/assets/btn-vantle-mail.svg" alt="Email hello@vantle.studio" height="54"></a>
 </p>
 
-I'm **MiddleSugar7000**, a freelance full-stack developer. I design and build:
+Lumen is a free template, and it comes from **[Vantle](https://vantle.studio/?utm_source=github&utm_medium=readme&utm_campaign=lumen)**, an independent design and development studio. We turn what you're building into a brand people remember, a website they understand, and a product they can use.
 
-- **Custom landing pages:** from $450, 48–72 hours
-- **Web apps and SaaS MVPs:** auth, PostgreSQL, Stripe / Dodo Payments / Whop checkout, from $950
-- **APIs and AI integrations:** OpenAI, Anthropic Claude, Gemini, from $650
+- **Brand & identity:** positioning, logo systems, typography, colour and full design systems
+- **Web design & 3D:** launch pages, Three.js and WebGL, GSAP motion, responsive builds
+- **Full-stack product:** SaaS platforms, dashboards, APIs, auth, payments and AI features
 
-Text-only communication (Discord, Telegram, email or X), fixed quotes, weekly previews, and you own 100% of the code.
+A focused landing page usually takes 2 to 4 weeks; a complete SaaS build 6 to 12. Tell us what you're making at [hello@vantle.studio](mailto:hello@vantle.studio) or through the [project form](https://vantle.studio/?utm_source=github&utm_medium=readme&utm_campaign=lumen#start), and we'll reply within one business day.
 
-🌐 [middlesugar7000.xyz](https://middlesugar7000.xyz) · ✈️ [Telegram](https://t.me/middlesugar7000) · 💬 Discord: `middlesugar7000.main` · 📧 [middlesugar700@gmail.com](mailto:middlesugar700@gmail.com)
+<a href="https://vantle.studio/?utm_source=github&utm_medium=readme&utm_campaign=lumen#work"><img src=".github/assets/vantle-work.svg" alt="Selected work by Vantle: LIMEN, a watch that only runs while you scroll; Curtly, an LLM gateway with 58.2% average input reduction; Draftify, an AI coding workspace; VOLT Arc, an electric superbike launch page" width="100%"></a>
 
 More free templates: [VOLT Arc](https://github.com/MiddleSugar7000/volt-arc-landing-page-template), a cinematic product launch page.
 
