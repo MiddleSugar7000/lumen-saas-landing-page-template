@@ -168,3 +168,4 @@ More free templates: [VOLT Arc](https://github.com/MiddleSugar7000/volt-arc-land
 
 <!-- update: v1 -->
 <!-- update: v2 -->
+<!-- sync: 2026-10-08-r1 -->
