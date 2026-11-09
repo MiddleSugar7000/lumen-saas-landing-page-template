@@ -92,6 +92,7 @@
   }, 900);
 
   /* ---------- Mini UI: autoscale bars ---------- */
+  // Dynamically generates 22 animated workload bars with staggered CSS keyframe delay intervals
   const bars = $('#bars');
   for (let i = 0; i < 22; i++) {
     const b = document.createElement('i');
