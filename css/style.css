@@ -1,4 +1,11 @@
 /* ============ Tokens ============ */
+/**
+ * Global CSS Design Tokens:
+ * - Surface elevation tiers: --bg-0 (abyssal canvas) through --bg-3 (card surfaces).
+ * - High-contrast text alpha ladder: --fg to --fg-30.
+ * - Luminescent signature accents: electric amber (#ff6a2b) with optical glow falloffs.
+ * - Kinematic easing curves: --ease for micro-interactions and --ease-out for modal entrances.
+ */
 :root{
   --bg-0:#07080b;
   --bg-1:#0b0d12;
