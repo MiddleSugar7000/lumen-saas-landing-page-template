@@ -80,6 +80,11 @@ section{position:relative}
 .sec-head.split{grid-template-columns:1.25fr 1fr;align-items:end;gap:40px}
 
 /* ============ Buttons ============ */
+/**
+ * Button component elevation styling:
+ * Features a top-weighted specular glass bevel (inset 0 1px 0), directional lighting gradients,
+ * and a blurred neon ambient shadow (.btn-primary::after) that intensifies on cursor hover.
+ */
 .btn{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;gap:10px;
   height:50px;padding:0 24px;border-radius:999px;font-size:15px;font-weight:500;letter-spacing:-.005em;white-space:nowrap;
   transition:transform .3s var(--ease),box-shadow .4s var(--ease),background .3s}
