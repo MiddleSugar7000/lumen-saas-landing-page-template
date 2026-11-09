@@ -108,10 +108,12 @@ blobMat.onBeforeCompile = (shader) => {
       }
       vec3 disp(vec3 p){ return p + normalize(p) * field(normalize(p)) * uAmp; }`)
     .replace('#include <beginnormal_vertex>', `
+      // Analytical surface normal recomputation via finite-difference forward sampling:
+      // Constructs an orthonormal tangent (tng) and bitangent (btg) plane on the sphere surface.
       vec3 pN = normalize(position);
       vec3 tng = normalize(cross(pN, abs(pN.y) > .99 ? vec3(1.,0.,0.) : vec3(0.,1.,0.)));
       vec3 btg = normalize(cross(pN, tng));
-      float e = .012;
+      float e = .012; // Epsilon distance offset for numerical gradient evaluation
       vec3 d0 = disp(position);
       vec3 d1 = disp(position + tng*e);
       vec3 d2 = disp(position + btg*e);
