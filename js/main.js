@@ -46,6 +46,11 @@
   addEventListener('scroll', onScroll, { passive: true });
 
   /* ---------- Render the WebGL scene only when a 3D section is on screen ---------- */
+  /**
+   * Energy-efficient WebGL visibility governor:
+   * Monitors all sections marked with [data-gl]; when none intersect the expanded viewport margin,
+   * the 60fps render loop pauses to eliminate GPU battery drain.
+   */
   const glSections = new Set();
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => en.isIntersecting ? glSections.add(en.target) : glSections.delete(en.target));
