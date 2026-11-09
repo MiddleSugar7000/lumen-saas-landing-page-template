@@ -9,6 +9,10 @@
   const setS = (k, v) => { const S = GL(); if (S) S[k] = v; };
 
   /* ---------- Smooth scroll ---------- */
+  /**
+   * Initializes Lenis inertial scrolling engine synchronized with GSAP ScrollTrigger ticker.
+   * lagSmoothing is disabled to avoid time-dilation jumps during intensive WebGL rendering frames.
+   */
   let lenis = null;
   if (!reduce) {
     lenis = new Lenis({ lerp: 0.085, smoothWheel: true, wheelMultiplier: 0.95 });
