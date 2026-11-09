@@ -300,6 +300,12 @@ const emberCore = new THREE.Mesh(new THREE.SphereGeometry(0.2, 24, 24), new THRE
 coreGroup.add(emberCore);
 
 // ---------- Post ----------
+/**
+ * Three-stage post-processing pipeline:
+ * 1. RenderPass: Full-resolution color & depth buffer capture.
+ * 2. UnrealBloomPass: Half-resolution dual-pass Gaussian blur pyramid for emissive glow diffusion.
+ * 3. OutputPass: ACES Filmic tone mapping and sRGB gamma transfer encoding.
+ */
 const composer = new EffectComposer(renderer);
 composer.addPass(new RenderPass(scene, camera));
 const bloom = new UnrealBloomPass(new THREE.Vector2(innerWidth / 2, innerHeight / 2), 0.55, 0.65, 0.82);
