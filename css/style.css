@@ -63,6 +63,11 @@ section{position:relative}
 .solid.alt.edge::before{background:linear-gradient(to bottom,transparent,var(--bg-1))}
 
 /* ============ Type ============ */
+/**
+ * Fluid typographic scale:
+ * Automatically scales display headings between 38px and 72px based on viewport width (5.2vw)
+ * paired with editorial serif accents (Instrument Serif) for high-end SaaS branding.
+ */
 .display{font-weight:500;letter-spacing:-.045em;line-height:.98;text-wrap:balance}
 .display em,.h2 em,.serif{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.02em}
 .dim{color:var(--fg-50)}
