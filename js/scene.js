@@ -135,6 +135,11 @@ const blob = new THREE.Mesh(new THREE.SphereGeometry(1.15, isMobile() ? 96 : 140
 coreGroup.add(blob);
 
 // Glass halo ring (refracts the core)
+/**
+ * Analytical physical glass approximation:
+ * Combines an inverted dot-product Fresnel falloff, chromatic wave iridescence,
+ * and high-shininess specular highlights (key light and warm kicker) without costly transmission passes.
+ */
 // Glass ring: a cheap fresnel shader (bright rim, faint iridescent sheen, specular streaks).
 // Looks like glass without the transmission pass that would re-render the whole scene.
 const glassMat = new THREE.ShaderMaterial({
