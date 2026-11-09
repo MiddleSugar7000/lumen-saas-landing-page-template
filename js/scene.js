@@ -56,6 +56,11 @@ function buildEnv() {
 scene.environment = buildEnv();
 
 // ---------- Simplex noise (GLSL, Ashima) ----------
+/**
+ * 3D Simplex noise implementation based on Stefan Gustavson and Ashima Arts.
+ * Provides continuous pseudo-random scalar field evaluations without texture lookups.
+ * Employs a 289-element polynomial hash ring and Taylor-series inverse sqrt approximation.
+ */
 const NOISE = /* glsl */`
 vec3 mod289(vec3 x){return x-floor(x*(1./289.))*289.;}
 vec4 mod289(vec4 x){return x-floor(x*(1./289.))*289.;}
