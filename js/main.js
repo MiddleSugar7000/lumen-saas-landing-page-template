@@ -29,6 +29,11 @@
   }));
 
   /* ---------- Nav: tint on scroll, hide on fast down-scroll ---------- */
+  /**
+   * Directional scroll listener for floating navigation header:
+   * Applies backdrop blur styling past 40px scroll depth, hides on continuous downward scroll,
+   * and immediately restores visibility upon upward user momentum.
+   */
   const nav = $('#nav');
   let lastY = 0;
   const onScroll = () => {
