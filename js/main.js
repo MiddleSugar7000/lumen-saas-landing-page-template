@@ -64,6 +64,11 @@
   setInterval(() => { reqs += Math.floor(40000 + Math.random() * 30000); reqEl.textContent = reqs.toLocaleString('en-US'); }, 700);
 
   /* ---------- Mini UI: latency sparkline ---------- */
+  /**
+   * Continuous rolling latency monitor:
+   * Translates an array of historical response times into a smoothed SVG cubic Bézier spline (C cx, y0 cx, y1 x1, y1)
+   * with a gradient fill underlay.
+   */
   const latPts = Array.from({ length: 40 }, (_, i) => 38 + Math.sin(i * 0.6) * 4 + (Math.random() - 0.5) * 6);
   const latLine = $('#latLine'), latArea = $('#latArea'), latNum = $('#latNum');
   const drawLat = () => {
