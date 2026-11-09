@@ -174,13 +174,13 @@ const glassRing = new THREE.Mesh(new THREE.TorusGeometry(1.95, 0.2, 32, 160), gl
 glassRing.rotation.set(1.15, 0.25, 0);
 coreGroup.add(glassRing);
 
-// Thin chrome orbits
+// Thin chrome orbits: concentric orbital guide paths for kinetic satellites
 const chrome = new THREE.MeshStandardMaterial({ color: '#ffffff', metalness: 1, roughness: 0.18, envMapIntensity: 1.4 });
 const orbitA = new THREE.Mesh(new THREE.TorusGeometry(2.55, 0.008, 6, 240), chrome);
 const orbitB = new THREE.Mesh(new THREE.TorusGeometry(2.9, 0.006, 6, 240), chrome);
 orbitA.rotation.set(1.35, -0.4, 0.3); orbitB.rotation.set(1.7, 0.55, -0.2);
 coreGroup.add(orbitA, orbitB);
-// Beads riding the orbits (emissive, they bloom)
+// Beads riding the orbits (emissive scalar intensity exceeds bloom luminance threshold)
 const beadMat = new THREE.MeshBasicMaterial({ color: new THREE.Color('#ffb48a').multiplyScalar(4) });
 const beadA = new THREE.Mesh(new THREE.SphereGeometry(0.045, 16, 16), beadMat);
 const beadB = new THREE.Mesh(new THREE.SphereGeometry(0.032, 16, 16), new THREE.MeshBasicMaterial({ color: new THREE.Color('#ffffff').multiplyScalar(3) }));
