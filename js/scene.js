@@ -259,12 +259,12 @@ const pMat = new THREE.ShaderMaterial({
       c.y = w * .5 + sin(c.x*1.1 + uTime*.8) * .1;
       c.yz *= rot(-.62);
       c.xz *= rot(.35);
-      // staggered morph: each particle travels at its own moment
+      // Staggered morph: individual particle flight windows triggered progressively by pseudo-random channel rnd.z
       float m1 = smoothstep(0., 1., clamp(uMorph * 1.6 - rnd.z * .6, 0., 1.));
       float m2 = smoothstep(0., 1., clamp((uMorph - 1.) * 1.6 - rnd.z * .6, 0., 1.));
       vec3 p = mix(a, b, m1);
       p = mix(p, c, m2);
-      // a little turbulence mid-flight
+      // Mid-flight parabolic displacement creates an atmospheric turbulence arc during transitions
       float flight = sin(m1 * 3.1416) + sin(m2 * 3.1416);
       if (flight > .002) p += vec3(snoise(p*.6+uTime*.3), snoise(p*.6-uTime*.3), snoise(p*.6+7.)) * .35 * flight;
       vec4 mv = modelViewMatrix * vec4(p, 1.);
