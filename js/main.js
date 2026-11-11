@@ -231,6 +231,11 @@
   })();
 
   /* ---------- Testimonials ---------- */
+  /**
+   * Assembles a 3-column infinite masonry testimonial wall:
+   * Distributes quote data sets across staggered column tracks, replicating cards with aria-hidden="true"
+   * to ensure continuous, accessible CSS keyframe vertical marquee loops.
+   */
   (() => {
     const Q = [
       ['We moved 14 models in a weekend. <b>p95 dropped from 410 ms to 62 ms</b> and our on-call rotation finally got quiet.', 'Priya Raman', 'Head of Infra, Vesper AI', '1494790108377-be9c29b29330', 1],
