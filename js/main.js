@@ -277,6 +277,11 @@
   })();
 
   /* ---------- FAQ ---------- */
+  /**
+   * Accessible single-open accordion component:
+   * Toggles aria-expanded attributes on click and triggers ScrollTrigger.refresh()
+   * following CSS height transitions to maintain accurate page scroll markers.
+   */
   $$('.qa button').forEach((b) => b.addEventListener('click', () => {
     const qa = b.parentElement, open = !qa.classList.contains('open');
     $$('.qa').forEach((q) => { q.classList.remove('open'); $('button', q).setAttribute('aria-expanded', 'false'); });
