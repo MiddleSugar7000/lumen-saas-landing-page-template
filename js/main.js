@@ -392,6 +392,11 @@
     ScrollTrigger.create({ trigger: '.cta', start: 'top bottom', end: 'top 15%', onUpdate: (s) => setS('cta', s.progress) });
 
     /* Pinned morph: halo -> globe -> fabric with holds between */
+    /**
+     * Piecewise progression curve for pinned 3D section:
+     * Introduces deliberate dwell holds at key stages (0: Halo, 1: Global Grid, 2: Fabric)
+     * connected by linear travel interpolation intervals across 3.2 viewports of scroll depth.
+     */
     const map = (p) => {
       // hold 0 | travel to 1 | hold 1 | travel to 2 | hold 2
       if (p < 0.14) return 0;
