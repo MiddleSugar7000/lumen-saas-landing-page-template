@@ -467,6 +467,11 @@
     gsap.from('.float', { opacity: 0, scale: 0.9, duration: 1, ease: 'power3.out', stagger: 0.2, scrollTrigger: { trigger: '.mock-stage', start: 'top 45%' } });
 
     /* Generic parallax */
+    /**
+     * Declarative parallax translation engine:
+     * Inspects data-speed coefficients across background and foreground decor elements,
+     * mapping vertical displacement scrub timelines relative to the parent section boundary.
+     */
     $$('[data-speed]').forEach((el) => gsap.to(el, { y: () => -80 * +el.dataset.speed, ease: 'none',
       scrollTrigger: { trigger: el.closest('section'), start: 'top bottom', end: 'bottom top', scrub: true, invalidateOnRefresh: true } }));
 
