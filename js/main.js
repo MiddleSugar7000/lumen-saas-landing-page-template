@@ -457,6 +457,11 @@
     gsap.to(so, { v: 6412, duration: 2.4, ease: 'power3.out', scrollTrigger: { trigger: spend, start: 'top 90%' }, onUpdate: () => spend.textContent = '$' + Math.round(so.v).toLocaleString('en-US') });
 
     /* Console: 3D tilt into place */
+    /**
+     * 3D isometric perspective entrance:
+     * Smoothly rotates mock console interface from a 32-degree pitch angle back to orthographic alignment,
+     * complemented by staggered reveals on peripheral floating status badges.
+     */
     gsap.fromTo('#mock', { rotateX: 32, scale: 0.86, y: 60 }, { rotateX: 0, scale: 1, y: 0, ease: 'none',
       scrollTrigger: { trigger: '.mock-stage', start: 'top 95%', end: 'top 25%', scrub: 0.6 } });
     gsap.from('.float', { opacity: 0, scale: 0.9, duration: 1, ease: 'power3.out', stagger: 0.2, scrollTrigger: { trigger: '.mock-stage', start: 'top 45%' } });
