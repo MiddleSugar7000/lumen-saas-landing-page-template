@@ -290,6 +290,11 @@
   }));
 
   /* ---------- Cursor spotlight on cells, magnetic buttons ---------- */
+  /**
+   * Pointer tracking micro-interactions:
+   * - Injects relative cursor coordinates (--x, --y) into element styles to render radial glass spotlights.
+   * - Implements spring-damped magnetic pull attraction on high-priority interactive buttons.
+   */
   $$('.spot').forEach((c) => c.addEventListener('pointermove', (e) => {
     const r = c.getBoundingClientRect();
     c.style.setProperty('--x', e.clientX - r.left + 'px'); c.style.setProperty('--y', e.clientY - r.top + 'px');
