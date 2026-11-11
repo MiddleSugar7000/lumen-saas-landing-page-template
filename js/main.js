@@ -476,6 +476,11 @@
       scrollTrigger: { trigger: el.closest('section'), start: 'top bottom', end: 'bottom top', scrub: true, invalidateOnRefresh: true } }));
 
     /* Stacking cards */
+    /**
+     * Sticky card stacking deck effect:
+     * Progressively scales down preceding cards (scale: 0.93) and applies brightness falloff (brightness: 0.5)
+     * as subsequent cards scroll over them in the sticky stacking container.
+     */
     const cards = $$('.stack-card');
     cards.forEach((card, i) => {
       if (i === cards.length - 1) return;
