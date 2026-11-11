@@ -109,6 +109,11 @@
   setInterval(() => { sws[swI % sws.length].classList.toggle('on'); swI += 2; }, 1800);
 
   /* ---------- Mini UI: typed deploy ---------- */
+  /**
+   * Simulates asynchronous CLI interactive model deployment typing:
+   * Types visible terminal characters with realistic randomized delay intervals while
+   * correctly skipping and auto-closing nested HTML syntax-highlighting tags via colorize().
+   */
   const codeEl = $('#codeType');
   const codeLines = [
     '<span class="c"># ship a model to the planet</span>',
