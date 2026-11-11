@@ -417,6 +417,11 @@
     showStage(0);
 
     /* Statement: scroll-fill per line */
+    /**
+     * Reading progress text illumination:
+     * Uses SplitText to segment paragraph into distinct lines and scrubs the background-position
+     * of a linear gradient mask from dim grey to brilliant white as each line traverses the viewport.
+     */
     SplitText.create('.fill-text', {
       type: 'lines', linesClass: 'line', autoSplit: true,
       onSplit(self) {
