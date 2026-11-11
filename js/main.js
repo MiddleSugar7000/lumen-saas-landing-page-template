@@ -163,6 +163,11 @@
   else new IntersectionObserver((e, o) => { if (e[0].isIntersecting) { typeCode(); o.disconnect(); } }).observe(codeEl);
 
   /* ---------- Console chart ---------- */
+  /**
+   * Generates a multi-layer stacked SVG traffic telemetry area chart:
+   * Accumulates successive trigonometric series with harmonic phase shifts (N=48 data points),
+   * synthesizes dynamic linear gradient definitions, and computes bidirectional SVG polygon paths.
+   */
   (() => {
     const svg = $('#trafficChart'); const W = 800, H = 170, N = 48;
     const series = [
