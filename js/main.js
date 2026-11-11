@@ -443,6 +443,11 @@
     gsap.from('.logos', { opacity: 0, y: 20, duration: 1.2, ease: 'power3.out', delay: 1.2 });
 
     /* Counters */
+    /**
+     * Numerical counter roll-up animations:
+     * Triggers smooth power3.out numerical interpolation when stat cards enter the viewport,
+     * applying locale-aware comma grouping and fixed decimal precision.
+     */
     $$('[data-count]').forEach((el) => {
       const end = +el.dataset.count, dec = +(el.dataset.dec || 0), o = { v: 0 };
       gsap.to(o, { v: end, duration: 2.2, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%' },
