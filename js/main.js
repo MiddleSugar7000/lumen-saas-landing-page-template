@@ -197,6 +197,11 @@
   })();
 
   /* ---------- World map (dot matrix + arcs) ---------- */
+  /**
+   * Dot-matrix global network topology projection:
+   * Renders a 60x32 grid of latitude/longitude points filtered through spherical harmonic landmass equations,
+   * interconnected with animated quadratic Bezier flight paths (Q mx,my) and pulsing regional server hubs.
+   */
   (() => {
     const svg = $('#worldMap'); const W = 600, H = 340;
     const land = (lat, lon) => {
