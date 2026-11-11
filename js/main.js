@@ -257,6 +257,11 @@
   })();
 
   /* ---------- Pricing toggle ---------- */
+  /**
+   * Interactive billing frequency slider:
+   * Measures active toggle button dimensions and slides the background indicator knob,
+   * interpolating the displayed subscription price with a GSAP numerical tween.
+   */
   (() => {
     const tg = $('#billing'), knob = $('.knob', tg), btns = $$('button', tg), price = $('[data-m]');
     const place = (b) => { knob.style.width = b.offsetWidth + 'px'; knob.style.transform = `translateX(${b.offsetLeft - 4}px)`; };
