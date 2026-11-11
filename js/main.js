@@ -364,6 +364,11 @@
     }
 
     /* Hero entrance */
+    /**
+     * Cinematic hero entrance choreography:
+     * Deconstructs display headline into line-masked word spans with rotational rise easing,
+     * staggered blur-removal on supporting copy, and initiation of WebGL core spin-up.
+     */
     const h1 = $('.hero h1');
     SplitText.create(h1, {
       type: 'words,lines', mask: 'lines', autoSplit: true,
