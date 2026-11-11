@@ -328,6 +328,12 @@
   const spend = $('#spend');
 
   /* ---------- Morph section stage logic (shared by motion + reduced) ---------- */
+  /**
+   * Coordinates UI transitions synchronized with WebGL morph states:
+   * Manages active card stage classes, drives staggered entrance/exit blurs on copy blocks,
+   * and scales floating telemetry HUD badges.
+   * @param {number} i - Target stage index [0, 1, 2]
+   */
   const stages = $$('.stage'), huds = $$('.hud .tag'), railNum = $('#railNum'), railBar = $('#railBar');
   let curStage = -1;
   const showStage = (i) => {
