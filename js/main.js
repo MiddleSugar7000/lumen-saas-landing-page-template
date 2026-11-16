@@ -37,6 +37,7 @@
    */
   const nav = $('#nav');
   let lastY = 0;
+  // Directional delta thresholding (+/- 4px deadband) prevents micro-jitter toggling during momentum deceleration
   const onScroll = () => {
     const y = scrollY;
     nav.classList.toggle('scrolled', y > 40);
