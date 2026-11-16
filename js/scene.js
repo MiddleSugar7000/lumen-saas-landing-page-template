@@ -70,6 +70,7 @@ scene.environment = buildEnv();
  * Employs a 289-element polynomial hash ring and Taylor-series inverse sqrt approximation.
  */
 const NOISE = /* glsl */`
+// Modulo 289 reduction avoids floating-point precision truncation on mobile GPUs
 vec3 mod289(vec3 x){return x-floor(x*(1./289.))*289.;}
 vec4 mod289(vec4 x){return x-floor(x*(1./289.))*289.;}
 vec4 permute(vec4 x){return mod289(((x*34.)+1.)*x);}
