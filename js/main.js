@@ -13,6 +13,7 @@
    * Initializes Lenis inertial scrolling engine synchronized with GSAP ScrollTrigger ticker.
    * lagSmoothing is disabled to avoid time-dilation jumps during intensive WebGL rendering frames.
    */
+  // RequestAnimationFrame coupling: syncs Lenis wheel interpolation directly with GSAP's internal clock
   let lenis = null;
   if (!reduce) {
     lenis = new Lenis({ lerp: 0.085, smoothWheel: true, wheelMultiplier: 0.95 });
