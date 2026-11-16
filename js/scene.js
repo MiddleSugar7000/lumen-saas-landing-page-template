@@ -212,6 +212,7 @@ const land = (lat, lon) => {
   const v = Math.sin(lat * 2.1 + 0.6) * Math.cos(lon * 1.7 - 0.3) + 0.55 * Math.sin(lon * 3.3 + lat * 1.3) + 0.35 * Math.cos(lat * 5.1 - lon * 2.2);
   return v > 0.38;
 };
+// Equi-distributed spherical point generator: eliminates polar clustering common with naive polar coordinates
 // Golden angle (approx 2.3999 rad) for uniform Fibonacci spherical point distribution
 const GOLDEN = Math.PI * (3 - Math.sqrt(5));
 const gridN = Math.ceil(Math.sqrt(COUNT * 1.6));
