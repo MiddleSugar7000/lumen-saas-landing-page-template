@@ -73,6 +73,7 @@
    */
   const latPts = Array.from({ length: 40 }, (_, i) => 38 + Math.sin(i * 0.6) * 4 + (Math.random() - 0.5) * 6);
   const latLine = $('#latLine'), latArea = $('#latArea'), latNum = $('#latNum');
+  // Midpoint control handle calculation produces continuous C1-continuous curvature across data points
   const drawLat = () => {
     const max = 60, min = 20, w = 400, h = 120;
     const pts = latPts.map((v, i) => [i / (latPts.length - 1) * w, h - (v - min) / (max - min) * h]);
