@@ -107,6 +107,7 @@ section{position:relative}
 .btn-lg{height:58px;padding:0 30px;font-size:16px}
 
 /* ============ Nav ============ */
+/* Will-change: translate isolates the floating navbar onto a separate GPU compositing layer */
 .nav{position:fixed;top:16px;left:50%;translate:-50% 0;z-index:50;will-change:translate;width:min(1180px,calc(100% - 24px));
   display:flex;align-items:center;justify-content:space-between;gap:16px;padding:8px 8px 8px 18px;border-radius:16px;
   background:rgb(12 14 19/.6);border:1px solid rgb(255 255 255/.07);
