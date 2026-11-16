@@ -306,6 +306,7 @@
     const r = c.getBoundingClientRect();
     c.style.setProperty('--x', e.clientX - r.left + 'px'); c.style.setProperty('--y', e.clientY - r.top + 'px');
   }));
+  // Physics-based spring pull: scales translation proportional to pointer displacement from element centroid
   if (fine && !reduce) $$('.magnetic').forEach((el) => {
     el.addEventListener('mousemove', (e) => {
       const r = el.getBoundingClientRect();
