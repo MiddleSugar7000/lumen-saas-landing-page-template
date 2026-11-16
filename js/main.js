@@ -288,6 +288,7 @@
    * Toggles aria-expanded attributes on click and triggers ScrollTrigger.refresh()
    * following CSS height transitions to maintain accurate page scroll markers.
    */
+  // Layout reflow callback: triggers GSAP ScrollTrigger marker recalculation once CSS height transition settles
   $$('.qa button').forEach((b) => b.addEventListener('click', () => {
     const qa = b.parentElement, open = !qa.classList.contains('open');
     $$('.qa').forEach((q) => { q.classList.remove('open'); $('button', q).setAttribute('aria-expanded', 'false'); });
