@@ -119,6 +119,7 @@ blobMat.onBeforeCompile = (shader) => {
     .replace('#include <beginnormal_vertex>', `
       // Analytical surface normal recomputation via finite-difference forward sampling:
       // Constructs an orthonormal tangent (tng) and bitangent (btg) plane on the sphere surface.
+      // Gram-Schmidt orthonormalization: project reference vector onto tangent plane
       vec3 pN = normalize(position);
       vec3 tng = normalize(cross(pN, abs(pN.y) > .99 ? vec3(1.,0.,0.) : vec3(0.,1.,0.)));
       vec3 btg = normalize(cross(pN, tng));
