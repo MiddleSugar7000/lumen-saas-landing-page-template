@@ -174,6 +174,7 @@
    */
   (() => {
     const svg = $('#trafficChart'); const W = 800, H = 170, N = 48;
+    // Trigonometric baseline compounding: stacks multiple harmonic waves into cumulative area polygons
     const series = [
       { c: '#5b6270', base: 30, amp: 16, ph: 2.2 },
       { c: '#ffb487', base: 52, amp: 22, ph: 0.9 },
