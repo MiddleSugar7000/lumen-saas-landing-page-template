@@ -442,6 +442,11 @@ function frame() {
 }
 
 // Adaptive quality: if frames keep running long, drop resolution, then bloom.
+/**
+ * Adaptive performance regulator:
+ * Samples mean frame duration over 1.5-second evaluation windows.
+ * If frame processing exceeds 20ms (>50fps drop), progressively reduces DPR before shedding bloom.
+ */
 let acc = 0, frames = 0, settle = 0;
 function adapt(dt) {
   if (settle > 0) { settle -= dt; return; }
