@@ -13,6 +13,12 @@ const isMobile = () => innerWidth < 900;
 const ACCENT = new THREE.Color('#ff6a2b');
 const BG = new THREE.Color('#07080b');
 
+/**
+ * WebGL context initialization:
+ * - antialias: false to prioritize fill-rate performance; post-processing passes manage visual smoothness.
+ * - powerPreference: 'high-performance' requests discrete GPU allocation on dual-GPU laptops.
+ * - stencil: false frees memory buffer channels since stenciling is unused in the pipeline.
+ */
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'high-performance', stencil: false });
 // Render-resolution budget: never shade more than ~2.1M pixels (≈1080p), whatever the screen.
 // On a 1440p/4K monitor with Windows scaling the raw DPR would mean 6-8M pixels per pass.
