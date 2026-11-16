@@ -152,6 +152,7 @@
     }
   };
   // returns `line` markup truncated to n visible characters
+  // HTML-aware substring slicer: preserves unopened or unclosed inline span elements during incremental typing
   function colorize(html, n) {
     let out = '', count = 0, i = 0;
     while (i < html.length && count < n) {
