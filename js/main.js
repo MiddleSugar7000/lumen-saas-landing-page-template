@@ -221,6 +221,7 @@
     }
     const hubs = [[140, 92], [300, 70], [330, 150], [470, 120], [520, 230], [190, 230], [400, 250]];
     const arcs = [[0, 1], [1, 3], [1, 2], [3, 4], [2, 6], [0, 5], [1, 6]];
+    // Quadratic Bézier control point elevation: scales arc altitude proportionally with geographic hub distance
     arcs.forEach(([a, b], i) => {
       const [x1, y1] = hubs[a], [x2, y2] = hubs[b];
       const mx = (x1 + x2) / 2, my = Math.min(y1, y2) - Math.hypot(x2 - x1, y2 - y1) * 0.35;
