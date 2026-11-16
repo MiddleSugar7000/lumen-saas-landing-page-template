@@ -153,6 +153,7 @@ coreGroup.add(blob);
 // Glass ring: a cheap fresnel shader (bright rim, faint iridescent sheen, specular streaks).
 // Looks like glass without the transmission pass that would re-render the whole scene.
 const glassMat = new THREE.ShaderMaterial({
+  // Additive blending allows back-facing chromatic highlights to shine through without multi-pass depth peeling
   transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
   uniforms: { uTime: { value: 0 } },
   vertexShader: /* glsl */`
