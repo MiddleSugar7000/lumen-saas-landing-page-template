@@ -287,6 +287,7 @@ const pMat = new THREE.ShaderMaterial({
       sz = mix(sz, 1.25 + hot * 1.6, m2);
       // traffic pulses sweeping across the fabric
       float pulse = pow(max(0., sin(posC.x*.9 + posC.z*.5 - uTime*2.2)), 18.);
+      // Perspective size attenuation: scales inversely with view-space depth (-mv.z)
       gl_PointSize = sz * uPx * (9. / -mv.z);
       vA = (.35 + .65 * rnd.x) * landBoost + m2 * (pulse * 1.6 + .15);
       vHot = hot;
