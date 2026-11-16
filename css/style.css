@@ -33,6 +33,7 @@
 }
 
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+/* Color scheme dark signals native form controls and scrollbars to render with dark user-agent styling */
 html{background:var(--bg-0);color-scheme:dark;-webkit-text-size-adjust:100%}
 html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth{scroll-behavior:auto!important}
