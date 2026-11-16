@@ -54,6 +54,8 @@ function buildEnv() {
   box(6, 6, '#c8d2e8', 0.22, [6, 2, 8]);           // faint neutral fill front-right
   box(14, 1, '#ffffff', 1.4, [0, -7, 3]);          // floor bounce strip
   box(3, 3, '#ffffff', 1.6, [-4, 3, 8]);           // small front sparkle
+  // Pre-filtered, Mipmapped Radiance Environment Map (PMREM) generator converts
+  // the geometric softbox bounding scene into a specular probe texture for IBL reflections.
   const pmrem = new THREE.PMREMGenerator(renderer);
   const tex = pmrem.fromScene(env, 0.035).texture;
   pmrem.dispose();
