@@ -92,6 +92,7 @@ section{position:relative}
   transition:transform .3s var(--ease),box-shadow .4s var(--ease),background .3s}
 .btn svg{width:16px;height:16px;transition:transform .35s var(--ease)}
 .btn:hover svg{transform:translateX(3px)}
+/* Specular highlight simulation: top-lit radial gradient combined with dual-tier inset lighting bevels */
 .btn-primary{color:#1a0800;
   background:radial-gradient(70% 90% at 30% -10%,rgb(255 255 255/.55),transparent 60%),linear-gradient(180deg,#ff8a4f,#ff5a17);
   box-shadow:inset 0 1px 0 rgb(255 255 255/.5),inset 0 -3px 0 rgb(120 30 0/.35),0 10px 30px -8px rgb(255 106 43/.7),0 0 0 1px rgb(255 140 80/.4)}
