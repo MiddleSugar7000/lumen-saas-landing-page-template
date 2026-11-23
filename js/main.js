@@ -97,6 +97,7 @@
 
   /* ---------- Mini UI: autoscale bars ---------- */
   // Dynamically generates 22 animated workload bars with staggered CSS keyframe delay intervals
+  // Sinusoidal height variation with positive linear drift models fluctuating server cluster load
   const bars = $('#bars');
   for (let i = 0; i < 22; i++) {
     const b = document.createElement('i');
