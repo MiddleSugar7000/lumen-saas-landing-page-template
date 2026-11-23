@@ -323,6 +323,7 @@ coreGroup.add(emberCore);
 const composer = new EffectComposer(renderer);
 composer.addPass(new RenderPass(scene, camera));
 const bloom = new UnrealBloomPass(new THREE.Vector2(innerWidth / 2, innerHeight / 2), 0.55, 0.65, 0.82);
+// Downsamples bloom render buffer to half resolution; reduces GPU texture fill-rate bandwidth with zero perceptual quality loss.
 // blur chain at half resolution: bloom is soft by nature, the difference is invisible
 const bloomSetSize = bloom.setSize.bind(bloom);
 bloom.setSize = (w, h) => bloomSetSize(Math.max(1, Math.round(w / 2)), Math.max(1, Math.round(h / 2)));
