@@ -413,6 +413,7 @@ function frame() {
   coreGroup.scale.setScalar(Math.max(coreScale, 0.0001));
   coreGroup.visible = coreScale > 0.01;
 
+  // Triple-axis compound rotation: autonomous idle revolution + damped pointer parallax + scroll-linked angular twist
   // rotation: idle spin + mouse parallax + scroll twist
   coreGroup.rotation.y = t * 0.18 + mouse.sx * 0.35 + h * 1.4;
   coreGroup.rotation.x = mouse.sy * 0.25 + Math.sin(t * 0.3) * 0.08;
