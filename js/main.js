@@ -61,6 +61,7 @@
   $$('[data-gl]').forEach((s) => io.observe(s));
 
   /* ---------- Live hero counter ---------- */
+  // Simulates live request ingestion rate with randomized incremental volume and US locale separator formatting
   const reqEl = $('#reqs');
   let reqs = 4812604113;
   setInterval(() => { reqs += Math.floor(40000 + Math.random() * 30000); reqEl.textContent = reqs.toLocaleString('en-US'); }, 700);
