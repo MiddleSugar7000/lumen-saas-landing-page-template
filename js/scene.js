@@ -351,6 +351,7 @@ window.LUMEN = { S, setActive: (v) => { active = v; } };
 
 const lerp = (a, b, t) => a + (b - a) * t;
 const clamp01 = (v) => Math.min(1, Math.max(0, v));
+// Piecewise cubic ease-in-out curve: provides continuous acceleration and deceleration for camera poses
 const ease = (t) => t < .5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
 
 function resize() {
