@@ -164,6 +164,7 @@ section{position:relative}
 .telemetry span{font-size:12.5px;color:var(--fg-50);display:flex;align-items:center;gap:8px}
 .telemetry b{font-weight:500;font-size:22px;letter-spacing:-.03em;font-variant-numeric:tabular-nums}
 .telemetry b small{font-size:14px;color:var(--fg-50);font-weight:400;margin-left:2px}
+/* Expanding radial box-shadow animation mimics pulse beacon for active cloud network nodes */
 .live{width:7px;height:7px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 0 rgb(69 212 131/.6);animation:ping 2s infinite}
 @keyframes ping{0%{box-shadow:0 0 0 0 rgb(69 212 131/.55)}80%,100%{box-shadow:0 0 0 8px rgb(69 212 131/0)}}
 .scroll-cue{position:absolute;right:var(--gutter);bottom:36px;z-index:2;display:flex;align-items:center;gap:12px;font-size:12px;color:var(--fg-50);letter-spacing:.04em}
