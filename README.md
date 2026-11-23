@@ -110,6 +110,7 @@ The 3D scene renders at most ~2.1M pixels per frame (≈1080p), whatever the dis
 
 ## Tech stack
 
+<!-- Runtime architecture: zero build tooling required; native browser ES module resolution via unpkg/jsdelivr CDNs -->
 HTML5 · CSS (custom properties) · JavaScript (ES modules) · [Three.js](https://threejs.org) r170 · [GSAP 3.13](https://gsap.com) + ScrollTrigger + SplitText · [Lenis](https://lenis.darkroom.engineering) · Google Fonts. Everything is loaded from CDNs.
 
 ## FAQ
