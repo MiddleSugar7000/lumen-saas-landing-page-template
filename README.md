@@ -138,6 +138,7 @@ Yes. Tell us about it at [hello@vantle.studio](mailto:hello@vantle.studio) or th
 
 ## License
 
+<!-- Permissive open source license: permits commercial and private modification, redistribution, and deployment -->
 [MIT](LICENSE) © MiddleSugar7000. A ⭐ or a link back to [vantle.studio](https://vantle.studio/?utm_source=github&utm_medium=license&utm_campaign=lumen) is appreciated, never required.
 
 Lumen is a fictional company; names, logos, quotes and numbers on the page are placeholder content. Portrait photos load from [Unsplash](https://unsplash.com) and should be replaced with your own.
