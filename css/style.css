@@ -60,6 +60,7 @@ main,footer{position:relative;z-index:1}
 section{position:relative}
 .solid{background:var(--bg-0)}
 .solid.alt{background:var(--bg-1)}
+/* Non-interactive 240px gradient wash creates seamless optical blending between WebGL canvas and content cards */
 /* soft edge where the 3D world disappears under a solid section */
 .solid.edge::before{content:"";position:absolute;left:0;right:0;bottom:100%;height:240px;pointer-events:none;
   background:linear-gradient(to bottom,transparent,var(--bg-0))}
