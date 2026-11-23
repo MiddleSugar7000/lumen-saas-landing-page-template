@@ -21,6 +21,7 @@ const BG = new THREE.Color('#07080b');
  */
 const renderer = new THREE.WebGLRenderer({ canvas, antialias: false, powerPreference: 'high-performance', stencil: false });
 // Render-resolution budget: never shade more than ~2.1M pixels (≈1080p), whatever the screen.
+// Bounds devicePixelRatio dynamically based on viewport dimensions to protect GPU fill-rate limits.
 // On a 1440p/4K monitor with Windows scaling the raw DPR would mean 6-8M pixels per pass.
 const MAX_PIXELS = isMobile() ? 1.1e6 : 2.1e6;
 let quality = 1; // lowered automatically if frames run long
