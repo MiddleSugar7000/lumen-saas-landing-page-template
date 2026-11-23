@@ -507,6 +507,7 @@
     /* Footer wordmark rises */
     gsap.from('.wordmark', { yPercent: 40, opacity: 0, ease: 'none', scrollTrigger: { trigger: '.footer', start: 'top bottom', end: 'bottom bottom', scrub: true } });
 
+    // Global layout recalculation: guarantees pinpoint ScrollTrigger marker accuracy once web fonts and images fully settle
     addEventListener('load', () => ScrollTrigger.refresh());
   };
 
