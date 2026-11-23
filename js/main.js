@@ -323,6 +323,7 @@
   $$('#term .ln').forEach((l, i) => l.style.transitionDelay = (0.3 + i * 0.45) + 's');
 
   /* ---------- Template credit badge ---------- */
+  // Ephemeral dismissal state tracked via sessionStorage; dismissals persist across page navigations within session
   const promo = $('#promo');
   if (promo) {
     let hidden = false;
