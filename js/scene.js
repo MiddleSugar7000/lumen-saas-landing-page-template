@@ -114,6 +114,11 @@ world.add(coreGroup);
 
 const blobUniforms = { uTime: { value: 0 }, uAmp: { value: 0.14 }, uFreq: { value: 0.72 }, uHeat: { value: 0 } };
 const blobMat = new THREE.MeshStandardMaterial({ color: '#ffffff', metalness: 1, roughness: 0.09, envMapIntensity: 1.3 });
+/**
+ * Liquid chrome core shader compilation hook:
+ * Injects Simplex noise vertex displacement with dual-octave harmonic modulation
+ * and derives orthonormal surface tangents for accurate specular reflection shading.
+ */
 blobMat.onBeforeCompile = (shader) => {
   Object.assign(shader.uniforms, blobUniforms);
   shader.vertexShader = shader.vertexShader
