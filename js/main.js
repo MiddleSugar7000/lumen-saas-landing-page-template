@@ -521,6 +521,11 @@
     gsap.fromTo('.cta h2', { scale: 0.92 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: '.cta', start: 'top bottom', end: 'top 20%', scrub: true } });
 
     /* Footer wordmark rises */
+    /**
+     * Massive footer brand wordmark entrance:
+     * Scrubs upward parallax translation from 40% vertical offset to flush alignment
+     * as the footer landmark scrolls into view.
+     */
     gsap.from('.wordmark', { yPercent: 40, opacity: 0, ease: 'none', scrollTrigger: { trigger: '.footer', start: 'top bottom', end: 'bottom bottom', scrub: true } });
 
     // Global layout recalculation: guarantees pinpoint ScrollTrigger marker accuracy once web fonts and images fully settle
