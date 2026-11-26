@@ -114,6 +114,11 @@
   }
 
   /* ---------- Mini UI: toggles flip on a loop ---------- */
+  /**
+   * Automated telemetry switch simulation:
+   * Periodically toggles UI feature flag states every 1.8 seconds
+   * to illustrate dynamic zero-downtime routing parameter updates.
+   */
   const sws = $$('#toggles .sw');
   let swI = 0;
   setInterval(() => { sws[swI % sws.length].classList.toggle('on'); swI += 2; }, 1800);
