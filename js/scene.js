@@ -279,6 +279,11 @@ const pUniforms = {
   uTime: { value: 0 }, uMorph: { value: 0 }, uPx: { value: renderer.getPixelRatio() },
   uAccent: { value: ACCENT.clone() }, uAlpha: { value: 1 }, uSwirl: { value: 1 },
 };
+/**
+ * Procedural particle vertex & fragment shader material:
+ * Evaluates staggered morph transitions, parabolic aerodynamic flight turbulence,
+ * perspective point-size depth attenuation, and dual-tone ember color mixing.
+ */
 const pMat = new THREE.ShaderMaterial({
   uniforms: pUniforms, transparent: true, depthWrite: false, blending: THREE.AdditiveBlending,
   vertexShader: /* glsl */`
