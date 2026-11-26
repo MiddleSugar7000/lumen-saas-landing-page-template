@@ -46,6 +46,11 @@ const camera = new THREE.PerspectiveCamera(32, innerWidth / innerHeight, 0.1, 10
 camera.position.set(0, 0, 11);
 
 // ---------- Studio environment: softboxes, warm rim, faint cool fill ----------
+/**
+ * Studio environment radiance synthesis:
+ * Assembles a virtual photography stage with 6 emissive softbox light planes,
+ * generating a pre-filtered roughness mipmap probe (PMREM) for high-fidelity metallic reflections.
+ */
 function buildEnv() {
   const env = new THREE.Scene();
   env.background = new THREE.Color('#050507');
