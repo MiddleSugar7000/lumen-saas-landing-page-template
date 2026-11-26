@@ -37,6 +37,11 @@ renderer.toneMappingExposure = 1.05;
 
 const scene = new THREE.Scene();
 scene.background = BG;
+/**
+ * Telephoto perspective camera setup:
+ * Calibrated with a narrow 32-degree field of view to minimize spherical distortion,
+ * positioned at Z=11 along the optical axis for cinematic perspective framing.
+ */
 const camera = new THREE.PerspectiveCamera(32, innerWidth / innerHeight, 0.1, 100);
 camera.position.set(0, 0, 11);
 
