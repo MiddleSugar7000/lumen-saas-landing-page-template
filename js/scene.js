@@ -203,6 +203,11 @@ coreGroup.add(glassRing);
 
 // Thin chrome orbits: concentric orbital guide paths for kinetic satellites
 const chrome = new THREE.MeshStandardMaterial({ color: '#ffffff', metalness: 1, roughness: 0.18, envMapIntensity: 1.4 });
+/**
+ * Concentric orbital ring guides:
+ * High-resolution torus geometries with polished PBR chrome materials,
+ * carrying emissive satellite beads whose scalar luminance exceeds the bloom threshold.
+ */
 const orbitA = new THREE.Mesh(new THREE.TorusGeometry(2.55, 0.008, 6, 240), chrome);
 const orbitB = new THREE.Mesh(new THREE.TorusGeometry(2.9, 0.006, 6, 240), chrome);
 orbitA.rotation.set(1.35, -0.4, 0.3); orbitB.rotation.set(1.7, 0.55, -0.2);
