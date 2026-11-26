@@ -282,6 +282,7 @@
    */
   (() => {
     const tg = $('#billing'), knob = $('.knob', tg), btns = $$('button', tg), price = $('[data-m]');
+    // Measures active billing option button geometry and repositions indicator pill
     const place = (b) => { knob.style.width = b.offsetWidth + 'px'; knob.style.transform = `translateX(${b.offsetLeft - 4}px)`; };
     const o = { v: 480 };
     btns.forEach((b) => b.addEventListener('click', () => {
