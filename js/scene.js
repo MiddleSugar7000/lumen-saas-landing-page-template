@@ -237,6 +237,13 @@ const land = (lat, lon) => {
 // Golden angle (approx 2.3999 rad) for uniform Fibonacci spherical point distribution
 const GOLDEN = Math.PI * (3 - Math.sqrt(5));
 const gridN = Math.ceil(Math.sqrt(COUNT * 1.6));
+/**
+ * Tri-state particle geometry synthesis:
+ * Computes coordinate buffers across three distinct topological states:
+ * State A: Flattened accretion disk halo shell.
+ * State B: Fibonacci spherical globe filtered against continental landmass harmonic sines.
+ * State C: Planar GPU compute fabric grid with sinusoidal surface ripple.
+ */
 for (let i = 0; i < COUNT; i++) {
   // A: loose halo shell, flattened like an accretion disk
   const r = 2.6 + Math.pow(Math.random(), 1.6) * 3.4;
