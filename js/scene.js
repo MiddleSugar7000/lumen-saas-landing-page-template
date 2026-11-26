@@ -508,6 +508,11 @@ function adapt(dt) {
   }
 }
 
+/**
+ * Preloader exit intro choreography:
+ * Interpolates core intro scale from 0.6 to 1.0 over an 1800ms duration
+ * as soon as the page lifecycle signals readiness.
+ */
 // Intro: let the core grow in once the page is ready
 window.LUMEN.intro = () => {
   if (reduce) return;
