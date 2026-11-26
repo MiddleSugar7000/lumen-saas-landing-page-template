@@ -21,6 +21,11 @@
     gsap.ticker.add((t) => lenis.raf(t * 1000));
     gsap.ticker.lagSmoothing(0);
   }
+  /**
+   * Smooth anchor jump navigation:
+   * Intercepts in-page hash links, applies a 20px offset to compensate for floating header clearance,
+   * and drives a 1.6s Lenis smooth scroll easing animation with native fallback.
+   */
   $$('a[href^="#"]').forEach((a) => a.addEventListener('click', (e) => {
     const id = a.getAttribute('href');
     if (id.length < 2) return;
