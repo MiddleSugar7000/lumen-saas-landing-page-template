@@ -422,6 +422,11 @@ function frame() {
   mouse.sy = lerp(mouse.sy, mouse.y, 0.05);
   mouse.vel *= 0.94;
 
+  /**
+   * Scroll-driven world pose interpolation:
+   * Maps normalised scroll triggers to spatial coordinates (tx, ty, ts) using piecewise cubic easing curves,
+   * transitioning from the hero right-flank pose to pinned morph and final CTA elevation.
+   */
   // --- target pose from scroll ---
   const h = ease(clamp01(S.hero));
   const mi = ease(clamp01(S.morphIn));
