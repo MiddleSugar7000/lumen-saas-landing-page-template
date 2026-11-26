@@ -467,6 +467,7 @@ function frame() {
   points.rotation.y = mouse.sx * 0.12;
   points.rotation.x = mouse.sy * 0.06 + (m > 1 ? 0.1 : 0);
 
+  // Hydrodynamic displacement modulation: adjusts liquid blob amplitude and thermal emission based on pointer velocity
   // liquid behaviour: calm by default, agitated by pointer speed and the CTA
   blobUniforms.uTime.value = t;
   blobUniforms.uAmp.value = lerp(blobUniforms.uAmp.value, 0.14 + mouse.vel * 0.16 + c * 0.05, 0.06);
